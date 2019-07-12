@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/Project.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <% if (session_check == true) { %>
+  <div>
+    <a class="signup" href="/logout"><%= session_name %> - Logout</a>
+  </div>
+  <% } %>
+  <% if (session_check == false) { %>
+  <div>
+    <a class="signup" href="/login">Login</a>
+    <a class="login" href="/signup">Signup</a>
+  </div>
+  <% } %>
+  <div class="header">
+    <h1 class="headertitle">T E S T I N G .. .. ..</h1>
+  </div>
+
+  <ul class="topnav">
+    <li><a href="#about">About</a></li>
+    <li><a href="#news">Product</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a class="active" href="#home">Home</a></li>
+  </ul>
+
+  <div class="row">
+    <div class="column left">
+      <ul class="menu">
+        <li>Heading 1</li>
+        <li>Heading 2</li>
+        <li>Heading 3</li>
+        <li>Heading 4</li>
+        <li>Heading 5</li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <h2 id="midheader">Some Awesome Heading</h2>
+      <p class="mid">A Node application for learning and testing.</p>
+    </div>
+    <div class="column rightupper">
+      <h2 class="rightcolumnh2">What?</h2>
+      <p>Better Than boring menu<p>
+    </div>
+    <div class="column rightmiddle">
+      <h2 class="rightcolumnh2">Where?</h2>
+      <p>Wherever You Like<p>
+    </div>
+    <div class="column rightlower">
+      <h2 class="rightcolumnh2">How?</h2>
+      <p>Just Contact Us<p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Visit us Once</p>
+  </div>
+
+</body>
+
+</html>

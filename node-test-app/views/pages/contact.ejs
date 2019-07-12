@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/contact.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <% if (session_check == true) { %>
+  <div>
+    <a class="signup" href="/logout"><%= session_name %> - Logout</a>
+  </div>
+  <% } %>
+  <% if (session_check == false) { %>
+  <div>
+    <a class="signup" href="/login">Login</a>
+    <a class="login" href="/signup">Signup</a>
+  </div>
+  <% } %>
+  <div class="header">
+    <h1 class="headertitle">T E S T I N G .. .. ..</h1>
+  </div>
+
+  <ul class="topnav">
+    <li><a href="#about">About</a></li>
+    <li><a href="#news">Product</a></li>
+    <li><a class="active" href="/contact">Contact</a></li>
+    <li><a href="/index">Home</a></li>
+  </ul>
+
+  <div class="formlayout">
+    <form action="">
+
+      <label for="fname">Name</label><br>
+      <input type="text" id="name" name="name" placeholder="name">
+
+      <label for="email">Email</label><br>
+      <input type="email" id="email" name="email" placeholder="email"><br>
+
+      <label for="contactnumber">Contact Number</label>
+      <input type="text" id="contactnumber" name="contactnumber" placeholder="contact number"><br>
+
+      <label for="subject">Subject</label><br>
+      <input type="text" id="subject" name="subject" placeholder="subject">
+
+      <label for="address">Query</label> <br><br>
+      <textarea class="queryarea" id="query" name="query" placeholder="query"></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <div class="row">
+    <div class="companycontact left">
+      <h3>India</h3>A-83, Sector 2 Noida 201301,<br>IndiaMob: +91-9821769996<br>Land-line: 0120-6841100
+    </div>
+    <div class="companycontact middle">
+      <h3>Ireland</h3>39 Virginia Court,Derry City,<br>Northern Ireland BT472DX U.K.<br>Mob: +44–7593639438
+    </div>
+    <div class="companycontact right">
+      <h3>Dubai</h3>Office 2001, Regal Tower,Business Bay,PO Box 29903 Dubai – UAE<br>Mob: +97142432460
+    </div>
+
+
+  </div>
+  <a class="foot" href="/index">
+    <div class="footer"><b>FEEL FREE TO CONTACT</b></div>
+  </a>
+
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/login.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+  <div class="header">
+    <h1 class="headertitle">T E S T I N G .. .. ..</h1>
+  </div>
+
+  <ul class="topnav">
+    <li><a href="#about">About</a></li>
+    <li><a href="#news">Product</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/index">Home</a></li>
+  </ul>
+
+  <% if (newpass == false) { %>
+  <div class="subheader"><b>W E L C O M E</b></div>
+  <% } %>
+
+  <% if (newpass == true) { %>
+  <div class="subheader"><b>New Password</b></div>
+  <% } %>
+
+  <% if (message != '') { %>
+  <div>
+    <p class="mid"><%= message %></p>
+  </div>
+  <% } %>
+
+  <div class="formlayout">
+    <% if (newpass == false) { %>
+    <% if (resetpass == false) { %>
+    <form action="/sign_in" method="post">
+
+      <label for="email">Email</label><br>
+      <input type="email" id="email" name="email" placeholder="email"><br>
+
+      <label for="password">Password</label><br>
+      <input type="password" id="password" name="password" placeholder="password"><br>
+
+      <input type="submit" value="Login">
+
+    </form>
+    <% } %>
+
+
+    <% if (resetpass == true) { %>
+    <form action="/reset_pass" method="post">
+
+      <label for="email">Email</label><br>
+      <input type="email" id="email" name="email" placeholder="email"><br>
+
+      <input type="submit" value="Reset Password">
+
+    </form>
+
+    <br>
+    <a class="createaccount" href="/login">
+      <div class="createbutton">Back to Login</div><a>
+        <% } %>
+
+        <br>
+        <a class="createaccount" href="/signup">
+          <div class="createbutton">Create Account</div><a>
+            <% } %>
+
+            <% if (newpass == true) { %>
+            <form action="/new_pass_update" method="POST">
+              <label for="email">Email</label><br>
+              <input type="email" id="email" name="email" value="<%= email %>" readonly><br>
+              <label for="password">New Password</label><br>
+              <input type="password" id="pass" name="password" placeholder="new password "><br>
+              <input type="submit" value="Submit">
+            </form>
+            <% } %>
+  </div>
+
+  <a class="foot" href="/index">
+    <div class="footer">T E S T I N G .. .. ..</div>
+  </a>
+
+
+</body>
+
+</html>

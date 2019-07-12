@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #2c2b2b;
+  margin: 0;
+}
+
+p.mid { color: white;
+  text-align: center;
+        text-align: justify
+        wrap;
+}
+
+a.login{
+  position: absolute;
+  top:5px;
+  right:5px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 1px solid red;
+  color: red;
+  padding: 10px 15px;
+}
+a.signup{
+  position: absolute;
+  top:5px;
+  right:100px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 1px solid red;
+  color: red;
+  padding: 10px 15px;
+}
+
+.headertitle{ font-size: 100px; margin: 67px 0px;}
+
+.header {
+  background-image: linear-gradient(to right, red, #2c2b2b);
+  margin-top: 0px;
+  padding: 0px;
+  text-align: left;
+  font-size: 15px;
+}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: none;
+}
+
+ul.topnav li {float: right;}
+
+ul.topnav li a {
+  display: block;
+  color: grey;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {color: black;}
+ul.topnav li a.active:hover {color: black;}
+ul.topnav li a.active {color: red;}
+
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.menu  li {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid red;
+  background-color: black;
+  color: #ffffff;
+  box-shadow: 0px 1px 30px red ,0px 1px 30px red;
+}
+
+ ul.menu li:hover {
+  background-color: red;
+  color: black;
+  box-shadow: none;
+}
+
+input[type], select{
+
+  width: 100%;
+  background-color: grey;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid grey;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type]:focus {
+ border: 1px solid red;
+ outline: none;
+}
+
+::placeholder{
+color: #bebebe;
+}
+
+select { outline: none; }
+
+.queryarea { 
+  background-color: grey; 
+  border-radius: 4px;
+  outline: none;
+  height: 200px;
+  width: 100%;
+  word-break: break-all;  
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: grey;
+}
+
+.formlayout {
+  position: relative;
+  top: 60px;
+  left: 30%;
+  width:40%;
+  border-radius: 5px;
+  background-color: none;
+  padding: 20px;
+  color: white
+  
+}
+
+.companycontact {
+  float: left;
+  background-color: none;
+  color: white;
+  border-radius: 10px;
+  border-bottom: 20px solid red;
+  text-align: center;
+  font-size: 12px;
+  padding:5px;
+  width:20%;
+  }
+
+.companycontact.left { 
+  position: relative;
+  left:10%; 
+  top:50px; 
+}
+
+.companycontact.middle { 
+  position: relative;
+  left:20%; 
+  top:50px; 
+}
+
+.companycontact.right { 
+  position: relative;
+  left:30%; 
+  top:50px; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.footer {
+  margin-top:100px;
+  background-color: none;
+  color:red;
+  border: 1px solid red;
+  border-radius: 10px;
+  border-bottom: 20px solid red;
+  text-align: center;
+  font-size: 40px;
+  padding:40px;
+  width:100%;
+  }
+
+a.foot {
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer:hover {
+  color: #ffffff;
+  text-align: center;
+  padding:40px;         
+  box-shadow: 2px 2px 10px black;
+
+}
+
+
+@media (max-width: 700px) { 
+ .headertitle { font-size: 30px; } 
+ .formlayout { width:60%; left: 20%; }
+ .footer { font-size: 20px; }
+ .companycontact { font-size: 6px;}
+ }
+
+@media (max-width: 400px) { 
+ .formlayout { width:80%; left: 10%; }
+ .footer { font-size: 10px; }
+ .companycontact { font-size: 6px; float: none; width: 80%}
+ .companycontact.left, .companycontact.middle, .companycontact.right{ position: relative; top:0px; left:10%; font-size: 8px;}
+ .companycontact.left{margin-top:40px;}
+ ul.topnav, a.login, a.signup {font-size:10px;}
+ .headertitle { font-size: 30px; }
+}
+
